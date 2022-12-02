@@ -25,20 +25,23 @@
                 <span class="text"><strong>Welcome!</strong></span>
             </h3>
 
-            <p style="text-align:justify-center;" class="sqsrte-large">Doaa
-                is a Cairo born, NYC raised and
-                based commercial food photographer
-                for advertising agencies and
-                editorial clients. Her Egyptian
-                roots and upbringing in the world's
-                most diverse city allowed her to
-                experience food as the ultimate
-                connector and the best way to honor
-                others from a young age. She still
-                holds this vision, and uses her work
-                to capture the spirit of community,
-                warmth and invitation behind
-                beautiful plates of food.
+            <p style="text-align:justify;" class="sqsrte-large">Faysal khan is a commercial photographer, valued
+                by his clients for his innovative style, his attention to detail and
+                his ability to transform a client’s initial germ of an idea into a superb portfolio of images. It is
+                unusual to find a
+                professional of faysal’s ability and integrity who also possesses a genuine charm and charisma, which
+                ensures that his
+                clients enjoy working with him time and again ; confident in the knowledge that the results will be
+                first class and the
+                experience of working with faysal will be valuable, creative and fun. As the most successful people on
+                the planet will
+                tell you, the ability to project your brand via strong imagery is key to your business success. Engaging
+                a professional
+                who can not only get the technical stuff right every time, but also go that extra mile, is more than
+                most of us can wish
+                for, but in faysalkhan photography you get all that and more. To find out how faysal can make the
+                difference that makes
+                the difference to you, contact him. Or simply browse the portfolio for further inspiration.
             </p>
 
 

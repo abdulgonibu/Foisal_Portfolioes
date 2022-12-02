@@ -10,9 +10,8 @@
 <!-- Title and nav wrapper -->
 <div class="header-title-nav-wrapper">
 
-
-
-
+    <link href="https://fonts.cdnfonts.com/css/corbel" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/segoe-ui-4" rel="stylesheet">
 
 
     @include('frontend.layouts.menu')
@@ -20,6 +19,8 @@
     <style>
         * {
             box-sizing: border-box;
+            background-color: #F0F0F0 !important;
+            font-family: 'Segoe UI', sans-serif !important;
         }
 
         body {
@@ -32,13 +33,11 @@
             /* // padding: 32px; */
         }
 
-        .row {}
-
         /* Create four equal columns that sits next to each other */
         .column {
             display: grid;
-            grid-template-columns: auto auto;
-            gap: 30px;
+            grid-template-columns: repeat(3, 1fr) !important;
+            gap: 10px;
 
         }
 
@@ -46,11 +45,12 @@
             width: 100;
         }
 
+
         /* Responsive layout - makes a two column-layout instead of four columns */
         @media screen and (max-width: 800px) {
             .column {
                 display: grid;
-                grid-template-columns: auto;
+                grid-template-columns: repeat(3, 1fr) !important;
                 gap: 10px;
             }
         }
@@ -59,7 +59,7 @@
         @media screen and (max-width: 600px) {
             .column {
                 display: grid;
-                grid-template-columns: auto;
+                grid-template-columns: repeat(1, 1fr) !important;
                 gap: 10px;
             }
         }
@@ -170,9 +170,8 @@
                                                                     <img data-src="{{asset('public/frontend/images/1.jpg')}}"
                                                                         data-image="{{asset('public/frontend/images/1.jpg')}}"
                                                                         data-image-dimensions="3668x2934"
-                                                                        data-image-focal-point="0.5,0.5"
-                                                                        alt="Foisal Elkady NYC Commercial Food Photographer - Cuban Rice and Chicken and Beans, Target Food and Beverage"
-                                                                        data-load="false" />
+                                                                        data-image-focal-point="0.5,0.5" alt="Foisal Elkady NYC Commercial Food Photographer - Cuban Rice and Chicken and Beans, Target Food and 
+                                                                        Beverage" data-load="false" />
 
 
                                                                 </div>
@@ -202,10 +201,7 @@
                                                             </div>
                                                         </div>
                                                     </figure>
-
-
                                                 </div>
-
                                                 <div class="gallery-lightbox-controls"
                                                     data-test="gallery-lightbox-controls">
                                                     <div class="gallery-lightbox-control" data-previous
@@ -233,46 +229,17 @@
                                                         </button>
                                                     </div>
                                                 </div>
-
                                             </div>
                                         </div>
-
                                     </div>
-
                                 </div>
-
-
-
-
-
-
-
-
-
-
                             </div>
                         </div>
-
-
                     </div>
                 </div>
-
             </section>
-
-
-
-
             @include('frontend.layouts.footer')
-
-
         </article>
-
-
-
-
-
-
-
     </main>
     <script type="text/javascript">
         const firstSection = document.querySelector('.page-section');
@@ -352,15 +319,14 @@
                         id="page-section-627cf2939b71bf3f24f1154c">
                         <div class="row sqs-row">
                             <div class="col sqs-col-12 span-12">
-                                <div class="sqs-block html-block sqs-block-html" data-block-type="2"
+                                <div class="html-block sqs-block-html" data-block-type="2"
                                     id="block-fa7e23b5a9db95abe486">
                                     <div class="sqs-block-content">
 
-                                        <h3 style="white-space:pre-wrap;">Foisal ELKADY | NYC FOOD PHOTOGRAPHER</h3>
-                                        <h4 style="white-space:pre-wrap;"> <a
-                                                href="https://view.flodesk.com/pages/6286a43bcb3b36e4c1694cf0">Newsletter</a>
+                                        <h3 style="white-space:pre-wrap;">Foysal khan is a commercial photographer</h3>
+                                        <h4 style="white-space:pre-wrap;"> <a href="">Newsletter</a>
                                         </h4>
-                                        <p class="" style="white-space:pre-wrap;"><strong>© </strong>Copyright 2022,
+                                        <p class="" style=";"><strong>© </strong>Copyright 2022,
                                             All rights reserved.</p>
 
 
@@ -375,20 +341,67 @@
         </section>
 
 
+
     </footer>
 
 </div>
 
-<script defer="defer"
+
+<script type="text/javascript">
+    $(document).ready(function(){
+    $('.gallery-item').magnificPopup({
+    type: 'image',
+    gallery:{
+    enabled:true
+  }
+});
+})
+
+</script>
+
+
+<script src="{{ asset('public/js/jquery-3.4.1.js') }}"></script>
+
+<script>
+    function myFunction(){
+
+    alert("hello");
+
+}
+
+
+</script>
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"
+    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+
+<script src="{{ asset('public/js/dist/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('public/js/dist/jquery.magnific-popup.js') }}"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+    integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"
+    integrity="sha512-C1zvdb9R55RAkl6xCLTPt+Wmcz6s+ccOvcr6G57lbm8M2fbgn2SUjUJbQ13fEyjuLViwe97uJvwa1EUf4F1Akw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="{{ asset('public/js/main.js') }}"></script>
+
+<script src="{{ asset('public/js/jquery-3.6.1.min.js') }}"></script>
+
+<script
     src="{{asset('public/frontend/static/vta/5c5a519771c10ba3470d8101/scripts/site-bundle.9812a83c3e8f1ea326dca0ea01bb79f1.js')}}"
     type="text/javascript"></script>
-<script type="text/javascript" data-sqs-type="imageloader-bootstrapper">
-    (function() {
-        if (window.ImageLoader) {
-            window.ImageLoader.bootstrap({}, document);
-        }
-    })();
-</script><svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none" data-usage="social-icons-svg">
+
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display:none" data-usage="social-icons-svg">
     <symbol id="instagram-unauth-icon" viewBox="0 0 64 64">
         <path
             d="M46.91,25.816c-0.073-1.597-0.326-2.687-0.697-3.641c-0.383-0.986-0.896-1.823-1.73-2.657c-0.834-0.834-1.67-1.347-2.657-1.73c-0.954-0.371-2.045-0.624-3.641-0.697C36.585,17.017,36.074,17,32,17s-4.585,0.017-6.184,0.09c-1.597,0.073-2.687,0.326-3.641,0.697c-0.986,0.383-1.823,0.896-2.657,1.73c-0.834,0.834-1.347,1.67-1.73,2.657c-0.371,0.954-0.624,2.045-0.697,3.641C17.017,27.415,17,27.926,17,32c0,4.074,0.017,4.585,0.09,6.184c0.073,1.597,0.326,2.687,0.697,3.641c0.383,0.986,0.896,1.823,1.73,2.657c0.834,0.834,1.67,1.347,2.657,1.73c0.954,0.371,2.045,0.624,3.641,0.697C27.415,46.983,27.926,47,32,47s4.585-0.017,6.184-0.09c1.597-0.073,2.687-0.326,3.641-0.697c0.986-0.383,1.823-0.896,2.657-1.73c0.834-0.834,1.347-1.67,1.73-2.657c0.371-0.954,0.624-2.045,0.697-3.641C46.983,36.585,47,36.074,47,32S46.983,27.415,46.91,25.816z M44.21,38.061c-0.067,1.462-0.311,2.257-0.516,2.785c-0.272,0.7-0.597,1.2-1.122,1.725c-0.525,0.525-1.025,0.85-1.725,1.122c-0.529,0.205-1.323,0.45-2.785,0.516c-1.581,0.072-2.056,0.087-6.061,0.087s-4.48-0.015-6.061-0.087c-1.462-0.067-2.257-0.311-2.785-0.516c-0.7-0.272-1.2-0.597-1.725-1.122c-0.525-0.525-0.85-1.025-1.122-1.725c-0.205-0.529-0.45-1.323-0.516-2.785c-0.072-1.582-0.087-2.056-0.087-6.061s0.015-4.48,0.087-6.061c0.067-1.462,0.311-2.257,0.516-2.785c0.272-0.7,0.597-1.2,1.122-1.725c0.525-0.525,1.025-0.85,1.725-1.122c0.529-0.205,1.323-0.45,2.785-0.516c1.582-0.072,2.056-0.087,6.061-0.087s4.48,0.015,6.061,0.087c1.462,0.067,2.257,0.311,2.785,0.516c0.7,0.272,1.2,0.597,1.725,1.122c0.525,0.525,0.85,1.025,1.122,1.725c0.205,0.529,0.45,1.323,0.516,2.785c0.072,1.582,0.087,2.056,0.087,6.061S44.282,36.48,44.21,38.061z M32,24.297c-4.254,0-7.703,3.449-7.703,7.703c0,4.254,3.449,7.703,7.703,7.703c4.254,0,7.703-3.449,7.703-7.703C39.703,27.746,36.254,24.297,32,24.297z M32,37c-2.761,0-5-2.239-5-5c0-2.761,2.239-5,5-5s5,2.239,5,5C37,34.761,34.761,37,32,37z M40.007,22.193c-0.994,0-1.8,0.806-1.8,1.8c0,0.994,0.806,1.8,1.8,1.8c0.994,0,1.8-0.806,1.8-1.8C41.807,22.999,41.001,22.193,40.007,22.193z" />

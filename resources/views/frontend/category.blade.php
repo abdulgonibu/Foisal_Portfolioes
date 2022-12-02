@@ -1,5 +1,13 @@
 @extends('frontend.layouts.master')
+
 @section('content')
+
+<style>
+    img {
+        height: 400px;
+    }
+</style>
+
 <div class="row">
     <div class="column">
         @foreach ($category->portfolies as $logo)

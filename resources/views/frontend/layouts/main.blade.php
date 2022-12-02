@@ -6,11 +6,14 @@
         .home {
             width: 100%;
             display: grid;
-            grid-template-columns: auto auto;
-            gap: 60px;
+            grid-template-columns: auto auto auto auto;
+            gap: 10px;
         }
 
-
+        img {
+            height: 100%;
+            width: 100%;
+        }
 
         @media screen and (max-width: 600px) {
             .home {
@@ -26,8 +29,10 @@
 
         <div class="home">
             @foreach ($portfolies as $portfolio)
-            <img src="{{ !empty($portfolio->image) ? url('public/upload/logo_images/' . $portfolio->image) : url('upload/no-image.png') }}"
-                style="width:100%">
+
+
+            <img src="{{(!empty($portfolio->image))?url('public/upload/logo_images/'.$portfolio->image):url('/upload/no-image.png')}}"
+                width="100%">
             @endforeach
         </div>
 
@@ -35,4 +40,34 @@
 
 
 </div>
+
+
+<script src="{{ asset('public/js/jquery-3.4.1.js') }}"></script>
+
+
+
+
+
+<script>
+    $(document).ready(function(){
+    $('.gallery-item').magnificPopup({
+    type: 'image',
+    gallery:{
+    enabled:true
+  }
+});
+})
+</script>
+
+
+
+
+
+
+
+<script src="{{ asset('public/js/dist/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('public/js/dist/jquery.magnific-popup.js') }}"></script>
+
+
+<script src="{{ asset('public/js/main.js') }}"></script>
 @endsection

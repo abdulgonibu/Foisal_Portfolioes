@@ -43,36 +43,36 @@
       &quot;backgroundMediaEffect&quot;: null,
       &quot;typeName&quot;: &quot;portfolio-grid-basic&quot;
     }" data-animation="none">
-    <div class="section-background">
+  <div class="section-background">
 
 
 
-    </div>
-    <div class="content-wrapper" style='
+  </div>
+  <div class="content-wrapper" style='
       
       
     '>
-        <div class="content">
-            <div id="gridThumbs" class="portfolio-grid-basic grid-wrapper collection-content-wrapper"
-                data-controller="GridImages" data-animation-role="section">
-                @foreach ($projects as $project)
-                <a class="grid-item" href="{{ route('projects.details', $project->id) }}">
-                    <div class="grid-image">
-                        <div class="grid-image-inner-wrapper">
-                            <img
-                                src="{{ !empty($project->image) ? url('public/upload/projects_images/' . $project->image) : url('public/upload/no-image.png') }}">
-                        </div>
-                    </div>
-                    <div class="portfolio-text">
-                        <h3 class="portfolio-title">{{$project->name}}</h3>
-                    </div>
-                </a>
-                @endforeach
-
-
+    <div class="content">
+      <div id="gridThumbs" class="portfolio-grid-basic grid-wrapper collection-content-wrapper"
+        data-controller="GridImages" data-animation-role="section">
+        @foreach ($projects as $project)
+        <a class="grid-item" href="{{ route('projects.details', $project->id) }}">
+          <div class="grid-image">
+            <div class="grid-image-inner-wrapper">
+              <img
+                src="{{ !empty($project->image) ? url('public/upload/projects_images/' . $project->image) : url('public/upload/no-image.png') }}">
             </div>
-        </div>
+          </div>
+          <div class="portfolio-text">
+            <h3 class="portfolio-title">{{$project->name}}</h3>
+          </div>
+        </a>
+        @endforeach
+
+
+      </div>
     </div>
+  </div>
 
 </section>
 @endsection

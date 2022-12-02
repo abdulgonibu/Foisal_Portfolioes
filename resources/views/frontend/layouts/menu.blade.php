@@ -1,18 +1,24 @@
 <!-- Title -->
 
+
 <div class="
                     header-title
                     
                   " data-animation-role="header-element">
 
     <div class="header-title-logo">
-        @foreach ($logos as $logo)
-        <a href="{{route('home')}}" data-animation-role="header-element">
+        <a href="{{route('home')}}">
+            <h3 class="logos">Faysal khan</h3>
+        </a>
+
+
+        {{-- @foreach ($logos as $logo)
+        {{-- <a href="{{route('home')}}" data-animation-role="header-element">
             <img src="{{ !empty($logo->image) ? url('public/upload/logo_images/' . $logo->image) : url('public/upload/no-image.png') }} "
                 alt="Foisal Elkady NYC Food Photographer">
 
-        </a>
-        @endforeach
+        </a> --}}
+        {{-- @endforeach --}}
     </div>
 
 
@@ -21,8 +27,7 @@
 
 
 
-<!-- Nav -->
-<div class="header-nav">
+<div class="header-nav menubar" id="menubar">
     <div class="header-nav-wrapper">
         <nav class="header-nav-list">
 
@@ -162,6 +167,7 @@
     .patty,
     .bottom-bun {
         height: 1px;
+        background-color: black !important;
     }
 </style>
 
@@ -210,13 +216,9 @@
                   " data-animation-role="header-element">
 
             <div class="header-title-logo">
-                @foreach ($logos as $logo)
-                <a href="{{route('home')}}" data-animation-role="header-element">
-                    <img src="{{ !empty($logo->image) ? url('public/upload/logo_images/' . $logo->image) : url('public/upload/no-image.png') }} "
-                        alt="Foisal Elkady NYC Food Photographer">
-
+                <a href="{{route('home')}}">
+                    <h3 class="logos">Faysal khan</h3>
                 </a>
-                @endforeach
             </div>
 
 
@@ -229,31 +231,19 @@
         <div class="header-nav">
             <div class="header-nav-wrapper">
                 <nav class="header-nav-list">
-
-
-
-
                     <div
                         class="header-nav-item header-nav-item--collection header-nav-item--active header-nav-item--homepage">
                         <a href="{{route('home')}}" data-animation-role="header-element" aria-current="page">
                             Home
                         </a>
                     </div>
-
-
-
-
-
-
                     <div class="header-nav-item header-nav-item--folder">
                         <a class="header-nav-folder-title" href="food.html" tabindex="-1"
                             data-animation-role="header-element">
                             Galleries
                         </a>
                         <div class="header-nav-folder-content">
-
                             @foreach ($categories as $category)
-
                             <div class="header-nav-folder-item">
                                 <a href="{{ route('category.view', $category->id) }}">
                                     <span class="header-nav-folder-item-content">
@@ -262,11 +252,6 @@
                                 </a>
                             </div>
                             @endforeach
-
-
-
-
-
                             <div class="header-nav-folder-item">
                                 <a href="beverage.html">
                                     <span class="header-nav-folder-item-content">
@@ -274,10 +259,6 @@
                                     </span>
                                 </a>
                             </div>
-
-
-
-
                             <div class="header-nav-folder-item">
                                 <a href="product.html">
                                     <span class="header-nav-folder-item-content">
@@ -285,10 +266,6 @@
                                     </span>
                                 </a>
                             </div>
-
-
-
-
                             <div class="header-nav-folder-item">
                                 <a href="people.html">
                                     <span class="header-nav-folder-item-content">

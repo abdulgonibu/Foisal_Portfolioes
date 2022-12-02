@@ -11,10 +11,6 @@
                             
                             horizontal-alignment--left
                             vertical-alignment--top
-                            
-                            
-                            
-                            
                             ' data-section-id="627d5551ed6f533f22a512bc" data-controller="SectionWrapperController"
     data-current-styles="{
                         &quot;imageOverlayOpacity&quot;: 0.15,
@@ -38,43 +34,53 @@
                         &quot;backgroundMediaEffect&quot;: null,
                         &quot;typeName&quot;: &quot;portfolio-grid-overlay&quot;
                         }" data-animation="none">
-    <div class="section-background">
+    <style>
+        .footertext {
+            font-size: 2em;
+            /* 40px/16=2.5em */
+            text-align: justify;
+        }
 
+        @media screen and (max-width: 800px) {
+            .footertext {
+                font-size: 2.5em;
+                /* 40px/16=2.5em */
+            }
+        }
 
+        /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .footertext {
+                font-size: 20px;
+                /* 40px/16=2.5em */
+            }
+        }
+    </style>
 
+    <div class="content-wrapper ">
+        <span class="footertext">Faysal
+            khan is a commercial photographer, valued by his clients for his innovative
+            style, his
+            attention to detail and his ability to transform a client’s initial germ of an
+            idea into a superb portfolio of images.
+            It is unusual to find a professional of faysal’s ability and integrity who also
+            possesses a genuine charm and charisma,
+            which ensures that his clients enjoy working with him time and again ; confident
+            in the knowledge that the results will
+            be first class and the experience of working with faysal will be valuable,
+            creative and fun. As the most successful
+            people on the planet will tell you, the ability to project your brand via strong
+            imagery is key to your business
+            success. Engaging a professional who can not only get the technical stuff right
+            every time, but also go that extra mile,
+            is more than most of us can wish for, but in faysalkhan photography you get all
+            that and more. To find out how faysal
+            can make the difference that makes the difference to you, contact him. Or simply
+            browse the portfolio for further
+            inspiration.</span>
     </div>
-    <div class="content-wrapper" style='
-      
-        
-      
-    '>
-        <div class="content">
 
 
-
-
-            <div class="sqs-layout sqs-grid-12 columns-12" data-type="page-section"
-                id="page-section-627d5551ed6f533f22a512bc">
-                <div class="row sqs-row">
-                    <div class="col sqs-col-12 span-12">
-                        <div class="sqs-block html-block sqs-block-html" data-block-type="2"
-                            id="block-6164561f15bb8c25cfab">
-                            <div class="sqs-block-content">
-
-                                <h3 style=""><span class="sqsrte-text-color--darkAccent">Foisal ELKADY is a
-                                        NYC-based
-                                        commercial and editorial food photographer. She works closely
-                                        with brands, publications and agencies to craft memorable
-                                        stories that highlight the communal and inviting spirit behind
-                                        beautiful plates of food.</span></h3>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
 </section>
