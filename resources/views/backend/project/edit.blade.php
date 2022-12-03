@@ -29,7 +29,7 @@
                         <div class="card-header">
                             <h3> Edit Project
                                 <a class="btn btn-success float-right btn-sm" href="{{ route('projects.add') }}"><i
-                                        class="fa fa-list"></i> Add Project</a>
+                                        class="fa fa-list"></i> Edit Project</a>
                             </h3>
                         </div><!-- /.card-body -->
                         <div class="card-body">
@@ -37,12 +37,10 @@
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-row">
-                                    <div class="form-row">
-                                        <div class="form-group col-md-12">
-                                            <label for="name"> Project Name</label>
-                                            <input type="text" name="name" class="form-control"
-                                                value="{{ $editData->name }}" id="name">
-                                        </div>
+                                    <div class="form-group col-md-12">
+                                        <label for="name"> Project Name</label>
+                                        <input type="text" name="name" class="form-control"
+                                            value="{{ $editData->name }}" id="name">
                                     </div>
                                 </div>
                                 <div class="form-group col-md-6">

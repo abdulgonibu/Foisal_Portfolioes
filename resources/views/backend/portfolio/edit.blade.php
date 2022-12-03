@@ -27,13 +27,13 @@
                     <!-- Custom tabs (Charts with tabs)-->
                     <div class="card">
                         <div class="card-header">
-                            <h3> Add Portfolio Image
+                            <h3> Edit Portfolio Image
                                 <a class="btn btn-success float-right btn-sm" href="{{ route('portfolies.show')}}"><i
                                         class="fa fa-list"></i> List</a>
                             </h3>
                         </div><!-- /.card-body -->
                         <div class="card-body">
-                            <form method="post" action="{{ route('portfolies.store')}}" id="myForm"
+                            <form method="post" action="{{ route('portfolies.update', $editData->id)}}" id="myForm"
                                 enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-row">
@@ -43,18 +43,24 @@
                                         <select name="category_id" id="category_id" class="form-control">
                                             @foreach ($categories as $category)
                                             <option value="{{ $category->id }}">{{ $category->name }}</option>
+
                                             @endforeach
                                         </select>
                                     </div>
 
                                     <div class="form-group col-md-4">
-                                        <label for="image">Portfolio Image</label>
-                                        <input type="file" name="image" class="form-control" id="image">
+                                        <label for="image"> Image</label>
+                                        <input type="file" value="{{$editData->image}}" name="image"
+                                            class="form-control" id="image">
                                     </div>
+
                                     <div class="form-group col-md-2">
-                                        <img id="showImage" src="{{ url('public/upload/no-image.png')}}"
+                                        <img id="showImage"
+                                            src="{{(!empty($editData->image))?url('public/upload/logo_images/'.$editData->image):url('public/upload/no-image.png')}}"
                                             style="width: 150px; height: 160px;border: 1px solid #000">
                                     </div>
+
+
 
                                     <div class="form-group col-md-6">
                                         <input type="submit" value="Submit" class="btn btn-primary">

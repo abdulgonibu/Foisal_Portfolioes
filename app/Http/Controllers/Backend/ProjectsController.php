@@ -38,4 +38,38 @@ class ProjectsController extends Controller
             return redirect()->route('projectds.show')->with('message', 'Project added successfully');
         }
     }
+
+
+
+    public function edit($id)
+    {
+        $editData = ProjectDetails::find($id);
+        $projects = Project::get();
+        return view('backend.projects.edit', compact('editData', 'projects'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $data = ProjectDetails::find($id);
+        $data->project_id = $request->project_id;
+        if ($request->file('image')) {
+            $file = $request->file('image');
+            @unlink(public_path('upload/project_details_images/' . $data->image));
+            $filename = date('YmdHi') . $file->getClientORiginalName();
+            $file->move(public_path('upload/project_details_images'), $filename);
+            $data['image'] = $filename;
+            $data->save();
+            return redirect()->route('projectds.show')->with('message', 'Project update successfully');
+        }
+    }
+
+    public function delete($id)
+    {
+        $portfolies = ProjectDetails::find($id);
+        if (file_exists('upload/project_details_images/' . $portfolies->image) and !empty($portfolies->image)) {
+            unlink('upload/project_details_images/' . $portfolies->image);
+        }
+        $portfolies->delete();
+        return redirect()->route('projectds.show')->with('message', 'Project deleted successfully');
+    }
 }

@@ -36,7 +36,7 @@ class ProjectController extends Controller
     public function edit($id)
     {
         $editData = Project::find($id);
-        return view('backend.category.edit-category', compact('editData'));
+        return view('backend.project.edit', compact('editData'));
     }
 
     public function update(Request $request, $id)
@@ -44,13 +44,13 @@ class ProjectController extends Controller
         $data = Project::find($id);
         $data->name = $request->name;
         $data->save();
-        return redirect()->route('categories.view')->with('message', 'Category update successfully');
+        return redirect()->route('projects.view')->with('message', 'Project update successfully');
     }
 
     public function delete($id)
     {
         $slider = Project::find($id);
         $slider->delete();
-        return redirect()->route('categories.view')->with('message', 'Category deleted successfully');
+        return redirect()->route('projects.view')->with('message', 'Project deleted successfully');
     }
 }

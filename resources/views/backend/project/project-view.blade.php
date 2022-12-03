@@ -55,10 +55,10 @@
 
 
                                         <td>
-                                            <a href="{{ route('categories.edit', $category->id) }}"
+                                            <a href="{{ route('projects.edit', $category->id) }}"
                                                 class="btn btn-sm btn-primary" title="edit"><i
                                                     class="fa fa-edit"></i></a>
-                                            <a href="{{ route('categories.delete', $category->id) }}" id="delete"
+                                            <a href="{{ route('projects.delete', $category->id) }}" id="delete"
                                                 class="btn btn-sm btn-danger" title="delete"><i
                                                     class="fa fa-trash"></i></a>
                                         </td>

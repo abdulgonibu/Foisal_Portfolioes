@@ -54,6 +54,7 @@ class AboutController extends Controller
             return redirect()->route('abouts.view')->with('message', 'About update successfully');
         }
     }
+
     public function delete($id)
     {
         $about = About::find($id);
